@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leszekwita/configuration.git
+          username: leszekwita
+          password: Micrad1980
+          refresh-rate: 15
+          timeout: 5
+          search-paths: 'configuration/,configuration/{application}/{profile}'
+server:
+  port: 8888
